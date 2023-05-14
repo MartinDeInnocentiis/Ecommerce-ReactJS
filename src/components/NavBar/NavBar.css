@@ -1,16 +1,20 @@
+
+
 header {
-    font-family: "Zen Dots", serif;
+    font-family: "Roboto Condensed", serif;
+    font-weight: 900;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 5px solid rgb(0, 255, 0);
-    background: linear-gradient(135deg, rgb(240, 240, 240) 0% 50%, rgb(197, 236, 192));
+    background: linear-gradient(135deg, rgba(249, 246, 246, 0.926) 0% 50%, rgb(197, 236, 192));
     color: rgb(53, 51, 51);
     text-shadow: 1px 2px 6px rgb(255, 255, 255);
 }
 
 h1 {
     margin:1rem;
+    font-family: "Zen Dots", sans-serif;
 }
 
 ul {

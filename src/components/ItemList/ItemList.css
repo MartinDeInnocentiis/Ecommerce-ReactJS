@@ -1,7 +1,7 @@
 #light .cardProducto {
     background-color: #cee2d1d8;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123);
-    border-radius: 30px 95px 30px 115px;
+    box-shadow: 2px 2px 2px rgba(17, 57, 20, 0.289);
+    border-radius: 10px 95px 30px 115px;
     width: 15rem;
     padding: 1rem;
     margin: 1rem;
@@ -12,9 +12,9 @@
 
 #dark .cardProducto  {
     background-color: rgba(35, 33, 61, 0.612);
-    box-shadow: 1px 1px 12px rgba(233, 233, 233, 0.365);
+    box-shadow: 2px 2px 8px rgba(233, 233, 233, 0.491);
     color: rgb(232, 254, 234);
-    border-radius: 30px 95px 30px 115px;
+    border-radius: 10px 95px 30px 115px;
 }
 
 .imgProducto {
@@ -33,7 +33,7 @@
 }
 
 #dark .btnProducto {
-    background-color:rgba(26, 25, 45, 0.706);
+    background-color:rgba(14, 11, 55, 0.706);
 }
 
 .contenedorProductos{

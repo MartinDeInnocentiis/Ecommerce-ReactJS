@@ -1,3 +1,4 @@
+import './ItemListContainer.css'
 import { useState, useEffect } from 'react'
 import { getProductos } from '../../asyncmock'
 import ItemList from '../ItemList/ItemList'
@@ -13,7 +14,7 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <h2>Productos</h2>
+            <h2>PRODUCTOS</h2>
             <ItemList productos={productos} />
         </div>
     )

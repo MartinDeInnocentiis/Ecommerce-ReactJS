@@ -7,10 +7,10 @@ const NavBar = () => {
         <h1>Hunters Shop</h1>
         <nav>
             <ul>
-                <li>Guantes</li>
-                <li>Kimonos</li>
-                <li>Indumentaria</li>
-                <li>Accesorios</li>
+                <li>GUANTES</li>
+                <li>KIMONOS</li>
+                <li>INDUMENTARIA</li>
+                <li>ACCESORIOS</li>
                 <li><CartWidget /></li>
             </ul>
         </nav>
