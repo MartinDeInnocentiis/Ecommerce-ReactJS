@@ -2,14 +2,12 @@
 #light {
   background: linear-gradient(180deg, rgb(229, 250, 226) 0% 65%, rgba(243, 248, 185, 0.637));
   color: black;
-  height: 100vh;
 }
 
 
 #dark {
   background: linear-gradient(180deg, rgba(10, 8, 36, 0.814) 0% 65%, rgba(14, 9, 110, 0.88));
   color: white;
-  height: 100vh;
 }
 
 .switch {

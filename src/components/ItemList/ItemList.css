@@ -1,0 +1,43 @@
+#light .cardProducto {
+    background-color: #cee2d1d8;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123);
+    border-radius: 30px 95px 30px 115px;
+    width: 15rem;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dark .cardProducto  {
+    background-color: rgba(35, 33, 61, 0.612);
+    box-shadow: 1px 1px 12px rgba(233, 233, 233, 0.365);
+    color: rgb(232, 254, 234);
+    border-radius: 30px 95px 30px 115px;
+}
+
+.imgProducto {
+    width: 150px;
+    object-fit: contain;
+}
+
+#light .btnProducto {
+    background-color: #28592ccc;
+    color: white;
+    font-size: 1.2rem;
+    width: 8rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#dark .btnProducto {
+    background-color:rgba(26, 25, 45, 0.706);
+}
+
+.contenedorProductos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
