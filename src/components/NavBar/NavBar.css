@@ -44,3 +44,8 @@ li:hover {
     color: rgba(196, 217, 191, 0.969);
     text-shadow: 1px 2px 18px rgb(0, 210, 49);
 }
+
+.nav-link {
+    text-decoration: none; 
+    color: inherit; 
+  }

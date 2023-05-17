@@ -2,7 +2,7 @@ import React from 'react'
 import './Accesorios.css'
 import { useState, useEffect } from 'react'
 import { getProductos } from '../../asyncmock'
-import ItemList from '../ItemList/ItemList'
+import Item from '../Item/Item'
 
 const Accesorios = () => {
     const [productosAccesorios, setProductosAccesorios] = useState([]);
@@ -20,13 +20,7 @@ const Accesorios = () => {
     return (
         <div>
             <h2>ACCESORIOS</h2>
-            {productosAccesorios.map(producto => (
-                <div key={producto.id}>
-                    <h2>{producto.nombre}</h2>
-                    <p>Precio: ${producto.precio}</p>
-                    <img src={producto.img} alt={producto.nombre} />
-                </div>
-            ))}
+            <div className="accesorios">{productosAccesorios.map(prod => <Item key={prod.id}  {...prod} />)}</div>
         </div>
     );
 }
