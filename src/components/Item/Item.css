@@ -10,9 +10,12 @@
 }
 
 .imgProducto {
-    width: 150px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*border-radius: 10px 95px 30px 10px;*/
 }
+
 
 .btnProducto {
     background-color: #393d20;
