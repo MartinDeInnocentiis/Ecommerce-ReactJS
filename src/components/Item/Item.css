@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.cardProducto h3{
+    font-size:larger;
+}
+
 .imgProducto {
     width: 100%;
     height: 100%;
