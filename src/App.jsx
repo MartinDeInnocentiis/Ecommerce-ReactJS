@@ -1,10 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import Kimonos from './components/Kimonos/Kimonos';
-import Guantes from './components/Guantes/Guantes';
-import Indumentaria from './components/Indumentaria/Indumentaria';
-import Accesorios from './components/Accesorios/Accesorios';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { useState } from 'react';
 import { createContext } from 'react';
 import ReactSwitch from 'react-switch';
@@ -28,11 +25,11 @@ function App() {
             <ReactSwitch onChange={switchTheme} checked={theme === "dark"} />
           </div>
           <Routes>
-            <Route path="/kimonos" element={<Kimonos />} />
-            <Route path="/guantes" element={<Guantes />} />
-            <Route path="/indumentaria" element={<Indumentaria />} />
-            <Route path="/accesorios" element={<Accesorios />} />
+            <Route path='/' element={<ItemListContainer title="PRODUCTOS"/>} />
+            <Route path='/categoria/:idCategoria' element={<ItemListContainer />} />
+            <Route path='/item/:idItem' element={<ItemDetailContainer />} />
           </Routes>
+          
         </div>
       </BrowserRouter >
     </ThemeContext.Provider>

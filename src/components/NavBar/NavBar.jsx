@@ -6,25 +6,28 @@ const NavBar = () => {
   return (
     <header>
       <Link to={"/"} className="nav-link">
-        <h1 className="Home">Hunters Shop</h1>
+        {
+          <img src="../img/logo.png" alt="StoreLogo" className="logo"/>
+          //<h1 className="Home">Hunters Shop</h1>
+        }
       </Link>
       <nav>
         <ul>
           <li>
-            <NavLink to={"/kimonos"} className="nav-link">Kimonos</NavLink>
+            <NavLink to={"/categoria/1"} className="nav-link">Kimonos</NavLink>
           </li>
           <li>
-            <NavLink to={"/guantes"} className="nav-link">Guantes</NavLink>
+            <NavLink to={"/categoria/2"} className="nav-link">Guantes</NavLink>
           </li>
           <li>
-            <NavLink to={"/indumentaria"} className="nav-link">Indumentaria</NavLink>
+            <NavLink to={"/categoria/3"} className="nav-link">Indumentaria</NavLink>
           </li>
           <li>
-            <NavLink to={"/accesorios"} className="nav-link">Accesorios</NavLink>
+            <NavLink to={"/categoria/4"} className="nav-link">Accesorios</NavLink>
           </li>
-          <li><CartWidget /></li>
         </ul>
       </nav>
+      <CartWidget />
     </header>
   )
 }
