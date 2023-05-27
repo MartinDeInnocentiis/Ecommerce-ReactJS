@@ -4,7 +4,7 @@ const ItemDetail = ({ id, nombre, precio, img }) => {
   return (
     <div className='contenedorItem'>
       <h2>{nombre} </h2>
-      <h3>${precio} </h3>
+      <h3>PRECIO: ${precio} </h3>
       <p className="description">
         Todos nuestros productos son de la más alta calidad, lo que nos convierte en la marca N°1 en el mundo de las MMA, Boxeo, JiuJitsu y otros deportes de combate. 
         Elaborados con materiales de primer nivel, nuestros productos alcanzan un standar inmejorable de calidad. Sponsor oficial de la UFC. 

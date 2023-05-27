@@ -23,21 +23,22 @@ h1 {
     font-family: "Zen Dots", sans-serif;
 }
 
-ul {
+.navbarList {
     margin-right: 1rem;
 }
 
-li {
+.objectList {
     display: inline-block;
     margin: 1rem;
     cursor:pointer;
     font-size:large;
+    transition: all .5s ease;
 }
-li:hover {
+.objectList:hover {
     transform: scale(1.2);
     color: rgba(90, 90, 90, 0.969);
-    text-shadow: 1px 2px 18px rgb(0, 210, 49);
     font-weight: bold; 
+    transition: all .5s ease;
 }
 
 #dark header {
@@ -47,13 +48,18 @@ li:hover {
     border-bottom: 5px solid rgba(0, 255, 0, 0.438);
 }
 
-#dark li:hover{
+#dark .objectList:hover{
     color: rgba(196, 217, 191, 0.969);
-    text-shadow: 1px 2px 18px rgb(53, 223, 11);
+    transition: all .5s ease;
 }
 
 .nav-link {
     text-decoration: none; 
     color: inherit; 
-  }
+    transition: all .5s ease;
+}
+
+.nav-link:hover, .nav-link:focus {
+    transition: all .5s ease;
+}
 

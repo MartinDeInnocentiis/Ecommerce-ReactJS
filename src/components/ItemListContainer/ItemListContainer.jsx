@@ -2,11 +2,33 @@ import './ItemListContainer.css'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { getProductos, getProductosPorCategoria } from '../../asyncmock'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 
 const ItemListContainer = (props) => {
   const [productos, setProductos] = useState([]);
   const {idCategoria} = useParams();
+
+  const location = useLocation();
+  const pathName = location.pathname
+  console.log(pathName);
+  const getPathName = (idCat) => {
+    switch (idCat) {
+      case "/categoria/1":
+        return "KIMONOS"
+        break
+      case "/categoria/2":
+        return "GUANTES"
+        break
+      case "/categoria/3": 
+        return "INDUMENTARIA"
+        break
+      case "/categoria/4":
+        return "ACCESORIOS"
+        break
+    }
+  }
+
+  const pageTitle = getPathName(pathName)
 
   useEffect(() => {
     const funcionProductos = idCategoria ? getProductosPorCategoria : getProductos;
@@ -19,7 +41,7 @@ const ItemListContainer = (props) => {
 
     return (
         <div>
-            <h2 className="titulo">{props.title}</h2>
+            <h2 className="titulo">{pageTitle}</h2>
             <ItemList productos={productos}/>
         </div>
     )

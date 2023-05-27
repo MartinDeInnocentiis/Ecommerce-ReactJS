@@ -12,17 +12,17 @@ const NavBar = () => {
         }
       </Link>
       <nav>
-        <ul>
-          <li>
+        <ul className="navbarList">
+          <li className="objectList">
             <NavLink to={"/categoria/1"} className="nav-link">Kimonos</NavLink>
           </li>
-          <li>
+          <li className="objectList">
             <NavLink to={"/categoria/2"} className="nav-link">Guantes</NavLink>
           </li>
-          <li>
+          <li className="objectList">
             <NavLink to={"/categoria/3"} className="nav-link">Indumentaria</NavLink>
           </li>
-          <li>
+          <li className="objectList">
             <NavLink to={"/categoria/4"} className="nav-link">Accesorios</NavLink>
           </li>
         </ul>

@@ -16,8 +16,11 @@
 
 .switch {
   display: flex;
-  width: 100vw;
   height: 100px;
   justify-content: flex-end;
   align-items: center;
+  margin-right: 5rem;
+  gap: .5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
 }

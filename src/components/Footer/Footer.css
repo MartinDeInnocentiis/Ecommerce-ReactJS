@@ -1,0 +1,42 @@
+.footerContainer {
+    padding: 1rem;
+    height: 35vh;
+    background-color: rgba(25, 23, 23, 0.895);
+    color: rgba(207, 203, 203, 0.922);
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.col {
+    padding-right: 12rem;
+    height: 60%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footerList:hover {
+    transform: scale(1.2);
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    margin-left: 70%;
+    margin-right: 3rem;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
