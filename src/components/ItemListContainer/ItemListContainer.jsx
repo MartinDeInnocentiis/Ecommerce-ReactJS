@@ -10,7 +10,7 @@ const ItemListContainer = (props) => {
 
   const location = useLocation();
   const pathName = location.pathname
-  console.log(pathName);
+
   const getPathName = (idCat) => {
     switch (idCat) {
       case "/categoria/1":
@@ -25,6 +25,9 @@ const ItemListContainer = (props) => {
       case "/categoria/4":
         return "ACCESORIOS"
         break
+
+      default:
+        return "PRODUCTOS"
     }
   }
 

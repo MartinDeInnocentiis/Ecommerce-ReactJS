@@ -8,7 +8,7 @@
 
 #dark .cardProducto  {
     background-color: rgba(35, 33, 61, 0.612);
-    box-shadow: 13px 13px 40px -21px rgba(233, 233, 233, 0.491);
+    box-shadow: 13px 13px 40px -21px rgba(0, 0, 0, 0.491);
     color: rgb(232, 254, 234);
     width: 15rem;
     margin: 1rem;
