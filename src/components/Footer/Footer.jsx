@@ -9,10 +9,15 @@ const Footer = () => {
                     <div className="col">
                         <h4 className='footer-item-title' >FIGHT FEVER SHOP</h4>
                         <ul>
-                            <li>Dirección:</li>
-                            <li>Cabrera 773,</li>
+                            <li>Dirección: Cabrera 773,</li>
                             <li>Ciudad Autonoma de Buenos Aires,</li>
                             <li>Argentina.</li>
+                            <br />
+                            <hr />
+                            <br />
+                            <li>Horarios de atención:</li>
+                            <li>Lunes a Viernes de 09 a 13 y 15 a 19 hs.</li>
+                            <li>Sabados de 09 a 13 hs.</li>
                         </ul>
                     </div>
 
@@ -42,6 +47,7 @@ const Footer = () => {
                             }
                         </Link>
                     </div>
+
                 </div>
             </div>
         </footer>

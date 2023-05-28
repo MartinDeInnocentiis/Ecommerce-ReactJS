@@ -1,5 +1,6 @@
 .footerContainer {
     padding: 1rem;
+    padding-bottom: 3rem;
     height: 35vh;
     background-color: rgba(25, 23, 23, 0.895);
     color: rgba(207, 203, 203, 0.922);
