@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 import { useState } from 'react';
 import { createContext } from 'react';
 import ReactSwitch from 'react-switch';
@@ -31,6 +32,8 @@ function App() {
             <Route path='/categoria/:idCategoria' element={<ItemListContainer />} />
             <Route path='/item/:idItem' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />}></Route>
+            <Route path='*' element={<h2> Sitio en construcción</h2>}></Route>
+            <Route path='/checkout' element={<Checkout />}></Route>
           </Routes>
           <Footer/>
         </div>

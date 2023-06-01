@@ -1,0 +1,18 @@
+.botonesItemCount {
+    background-color: aqua;
+    border:none;
+    color:rgb(255, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.contador{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 10px;
+}
