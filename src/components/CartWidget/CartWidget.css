@@ -2,6 +2,10 @@
     width: 2rem;
 }
 
-strong {
-    font-size: 75%;
+
+/*POR QUE ESTO NO FUNCIONA?*/
+.cartNumber {
+    text-decoration: none;
+    font-weight: bold;
 }
+

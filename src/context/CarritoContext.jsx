@@ -7,9 +7,14 @@ export const CarritoProvider = ({ children }) => {
 
     console.log(carrito);
 
-
     const agregarProducto = (item, cantidad) => {
-        const productoExistente = carrito.find(prod => prod.item.id)
+        if (!yaEstaEnCarrito(item.id)) {
+            setCarrito(prev => [...prev, { item, cantidad }]);
+        } else {
+            console.log("Producto ya agregado");
+        }
+
+        /*const productoExistente = carrito.find(prod => prod.item.id)
 
         if (!productoExistente) {
             setCarrito(prev => [...prev, { item, cantidad }])
@@ -21,8 +26,12 @@ export const CarritoProvider = ({ children }) => {
                     return prod;
                 }
             });
-            setCarrito(carritoActualizado);
-        }
+            setCarrito(carritoActualizado); 
+        }*/
+    }
+
+    const yaEstaEnCarrito = (id) => {
+        return carrito.some(prod => prod.item.id === id);
     }
 
 
@@ -37,7 +46,7 @@ export const CarritoProvider = ({ children }) => {
 
 
     return (
-        <CarritoContext.Provider value={{ carrito, agregarProducto, eliminarProducto, vaciarCarrito }}>
+        <CarritoContext.Provider value={{ carrito, agregarProducto, yaEstaEnCarrito, eliminarProducto, vaciarCarrito }}>
             {children}
         </CarritoContext.Provider>
     )

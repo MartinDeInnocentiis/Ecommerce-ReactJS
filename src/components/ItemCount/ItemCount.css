@@ -1,18 +1,36 @@
+.contadorItems{
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    padding-bottom: 5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
 .botonesItemCount {
-    background-color: aqua;
+    background-color: rgb(196, 208, 208);
+    color:rgba(26, 24, 24, 0.722);
     border:none;
-    color:rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
     padding: 10px 20px;
+    margin: 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 5px;
     cursor: pointer;
 }
+
 
 .contador{
     font-size: 24px;
     font-weight: bold;
-    margin: 0px 10px;
+    margin: 10px 10px;
+}
+
+.botonAgregar{
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
