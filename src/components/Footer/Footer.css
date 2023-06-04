@@ -21,12 +21,12 @@
 ul {
     list-style-type: none;
     padding: 0;
+    transition: transform .5s ease;
 }
 
 .footerList:hover {
     transform: scale(1.2);
     color: rgb(255, 255, 255);
-    transition: all 0.5s ease;
 }
 
 .logo {

@@ -9,32 +9,13 @@
 #dark .cardProducto  {
     background-color: rgba(35, 33, 61, 0.612);
     box-shadow: 13px 13px 40px -21px rgba(0, 0, 0, 0.491);
-    color: rgb(232, 254, 234);
+    color: rgba(237, 237, 237, 0.878);
     width: 15rem;
     margin: 1rem;
 }
 
 
-.link {
-    text-align: center;
-    color: white;
-    font-size: 1.2rem;
-    width: 8rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none; 
-    color: inherit; 
-    padding: 0.5rem .03rem;
-}
 
-#light .link {
-    background-color: #2b6a308a;
-}
-
-#dark .link {
-    background-color:rgba(31, 13, 83, 0.65);
-}
 
 .contenedorProductos{
     display: flex;

@@ -28,15 +28,31 @@
     padding-right:22rem;
 }
 
-.seguirComprando{
+.finalizarCompra {
+    padding:2rem;
     display: flex;
     justify-content: center; 
     align-items: center;
-    text-decoration: none;
 }
 
-.finalizarCompra {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+.botonFinalizar{
+    cursor: pointer;
+    border:none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.842);
+    color:#fff;
+    font-size: larger;
+    height:7vh;
+    width: 25vw;
+    transition: all .5s ease;
+}
+
+.botonFinalizar a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.botonFinalizar:hover{
+    background-color:rgb(51, 86, 51);
+    transition: all .5s ease;
 }

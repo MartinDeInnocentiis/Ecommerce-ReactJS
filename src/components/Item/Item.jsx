@@ -10,7 +10,7 @@ const Item = ({ id, nombre, precio, img, categoria }) => {
             <div className="card-info-container">
                 <h3>{nombre}</h3>
                 <p>Precio: ${precio} </p>
-                <Link to={`/item/${id}`} className="link"> Ver más</Link>
+                <Link to={`/item/${id}`} className="link"> Ver más </Link>
             </div>
         </div>
     )

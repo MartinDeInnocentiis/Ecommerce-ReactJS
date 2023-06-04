@@ -42,8 +42,8 @@ h1 {
 }
 
 #dark header {
-    background: linear-gradient(135deg, rgba(20, 18, 41, 0.814) 0% 65%, rgba(68, 64, 150, 0.88));
-    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, rgba(20, 18, 41, 0.814) 0% 65%, rgba(72, 69, 143, 0.88));
+    color: rgba(237, 237, 237, 0.878);
     text-shadow: none;
     border-bottom: 5px solid rgba(0, 255, 0, 0.438);
 }
