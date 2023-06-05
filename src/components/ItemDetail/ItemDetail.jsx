@@ -35,10 +35,17 @@ const ItemDetail = ({ id, nombre, precio, stock, img }) => {
       {
         //Logica de montaje y desmontaje de componentes:
         agregarCantidad > 0 ? (
-          <div className="finalizarCompra">
-            <button  className="botonFinalizar">
-              <Link to="/cart">FINALIZAR COMPRA</Link>
-            </button></div>
+          <>
+            <div className="finalizarCompra">
+              <button className="botonFinalizar">
+                <Link to="/cart">FINALIZAR COMPRA</Link>
+              </button>
+            </div>
+            
+            <div>
+              <Link className="seguirComprando" to="/"> <button className="botonSeguir">Seguir comprando</button></Link>
+            </div>
+          </>
         ) : (
           <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
         )}

@@ -1,9 +1,12 @@
 .imgCarrito {
     width: 2rem;
+}
+
+.contenedorCart{
     transition: all .5s ease;
 }
 
-.imgCarrito:hover{
+.contenedorCart:hover{
     transform: scale(1.2);
     transition: all .5s ease;
 }

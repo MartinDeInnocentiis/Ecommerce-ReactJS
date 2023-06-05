@@ -1,0 +1,85 @@
+.vacio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    font-family: "Roboto Condensed";
+    font-weight: 1000;
+    letter-spacing: 4px;
+}
+
+.seguirComprando {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding-bottom: 8rem;
+}
+
+
+.botonSeguir {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 7vh;
+    width: 15vw;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.842);
+    color: #fff;
+    cursor: pointer;
+    font-size: larger;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: all .5s ease;
+}
+
+.botonSeguir:hover {
+    background-color: rgb(51, 86, 51);
+    transition: all .5s ease;
+}
+
+.divBotonesCart {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 7rem;
+    padding-top: 3rem;
+}
+
+.seguirComprando2 {
+    text-decoration: none;
+    color: #fff;
+}
+
+.vaciarCart {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 7vh;
+    width: 15vw;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.842);
+    color: #fff;
+    cursor: pointer;
+    font-size: larger;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: all .5s ease;
+
+}
+
+.vaciarCart:hover {
+    background-color: rgb(190, 53, 53);
+}
+
+.precioFinal {
+    font-family: "Roboto Condensed";
+    font-size: xx-large;
+    font-weight: 1000;
+    letter-spacing: 4px;
+}
+
+.cantidadTotal{
+    margin-top: 5rem;
+    font-size: larger;
+    letter-spacing: 3.6px;
+}

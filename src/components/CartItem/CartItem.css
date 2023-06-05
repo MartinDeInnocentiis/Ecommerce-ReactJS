@@ -1,0 +1,32 @@
+.cartItem{
+    padding-left:4%;
+    padding-right: 4%;
+    font-family: "Roboto Condensed"; 
+    font-weight: 1000;
+    letter-spacing: 0.5px;
+}
+
+.cartItemPrecio{
+    font-size: larger;
+    font-style: bold;
+    letter-spacing: 1px;
+}
+
+
+.botonEliminar{
+    background-color: rgba(0, 0, 0, 0.842);
+    color:#fff;
+    border:none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size:small;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    transition: all .5s ease;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.botonEliminar:hover{
+    background-color:rgb(190, 53, 53);
+}
