@@ -2,6 +2,8 @@ import { useState, useEffect, useContext } from "react"
 import { CarritoContext } from "../../context/CarritoContext"
 import { db } from "../../services/config"
 import { collection, addDoc } from "firebase/firestore"
+import './Checkout.css'
+
 
 const Checkout = () => {
     const { carrito, vaciarCarrito } = useContext(CarritoContext);
@@ -57,16 +59,15 @@ const Checkout = () => {
 
     return (
         <div>
-            <h2>Checkout</h2>
-            <form onSubmit={manejadorSubmit}>
+            <h2 className="h2Checkout">Checkout</h2>
+            <form className="formManejador" onSubmit={manejadorSubmit}>
                 {carrito.map(producto => (
-                    <div key={producto.item.id}>
+                    <div className="divCheckout" key={producto.item.id}>
                         <p>{producto.item.nombre} x {producto.cantidad}</p>
                         <p>Precio: $ {producto.item.precio}</p>
                         <hr />
                     </div>
                 ))}
-                <hr />
 
                 <div>
                     <label htmlFor="">Nombre</label>
@@ -97,11 +98,11 @@ const Checkout = () => {
                     error && <p style={{ color: "red" }}> {error} </p>
                 }
 
-                <button type="submit">Finalizar Orden</button>
+                <button className="botonFinalizarCheckout" type="submit">FINALIZAR ORDEN</button>
                 
                 {
                     ordenId && (
-                        <strong>Gracias por tu compra! Tu numero de orden es: {ordenId} </strong>
+                        <strong className="mensajeFinal">Gracias por tu compra! Tu numero de orden es: {ordenId} </strong>
                     )
                 }
             </form>
