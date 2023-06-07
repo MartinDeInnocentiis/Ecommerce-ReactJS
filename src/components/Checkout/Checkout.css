@@ -1,26 +1,66 @@
-.h2Checkout {
-    padding-top: 1rem;
+.contenedorCheckout{
+    margin-left: 5rem;
+    display: flex;
+    padding-top: 2rem;
+}
+
+.div1 {
+    flex:1;
+}
+
+.div2{
+    flex:1;
+    padding-right: 10%;
+}
+
+.contenedorDetalles{
+    width: 70%;
+}
+
+.detallesOrden {
+    padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-left: 3rem;
     font-family: "Roboto Condensed";
     font-weight: 1000;
     letter-spacing: 5px;
+    font-size: x-large;
+}
+
+
+.precioFinalCheckout {
+    text-align: start;
+    font-family: "Roboto Condensed";
+    font-size: x-large;
+    font-weight: 1000;
+    letter-spacing: 4px;
+}
+
+.h2Checkout {
+    font-family: "Roboto Condensed";
+    font-weight: 1000;
+    letter-spacing: 7px;
     font-size: xx-large;
 }
 
 label {
     display: block;
-    padding-top: 1rem;
+    padding-top:  0.5rem;
     margin-bottom: 5px;
     font-family: "Roboto Condensed";
     letter-spacing: 1px;
     font-size: larger;
 }
 
+#dark label{
+    color:rgba(255, 255, 255, 0.685);
+}
+
 input {
-    width: 40%;
-    padding: 5px;
-    padding-bottom: 1rem;
+    width: 75%;
+    padding: 9px;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: "Roboto Condensed";
@@ -31,19 +71,20 @@ input {
 
 #dark input{
     background-color: rgba(255, 255, 255, 0.075);
+    color:white;
 }
 .botonFinalizarCheckout{
     cursor: pointer;
-    margin-top: 2rem;
-    margin-bottom: 6rem;
-    width: 40.6%;
+    margin-top: 1rem;
+    margin-bottom: 7rem;
+    width: 77.5%;
     height:7vh;
     border-radius: 3px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: larger;
     border:none;
     background-color: rgba(0, 0, 0, 0.842);
-    color:#fff;
+    color:#e0dfdfd3;
     transition: all .5s ease;
 }
 
@@ -54,6 +95,34 @@ input {
     color:rgb(26, 24, 24);
 }
 
-.formManejador{
-    margin-left: 3rem;
+#dark .botonFinalizarCheckout:hover{
+    background-color:rgba(0, 255, 0, 0.438);
 }
+
+
+.error{
+    margin-top: 2rem;
+    font-size: larger;
+}
+
+
+.divMsjFinal{
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Condensed";
+    font-weight: 1000;
+    letter-spacing: 5px;
+    font-size: xx-large;
+}
+
+.msjFinal{
+    justify-content: center;
+    padding-top: 2rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 130%;
+    padding-bottom: 10rem;
+}
+

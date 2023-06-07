@@ -2,12 +2,12 @@
     background-color: #bcbd8d;
     border-radius: 10px 95px 30px 115px;
     width: 15rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    height: 30rem;
     
 }
 

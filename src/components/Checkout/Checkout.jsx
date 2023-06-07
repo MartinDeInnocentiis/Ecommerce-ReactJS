@@ -15,19 +15,26 @@ const Checkout = () => {
     const [error, setError] = useState("")
     const [ordenId, setOrdenId] = useState("")
 
+    //Calculo el total de los productos
+    const totalCantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+
+    //Calculo el precio total
+    const total = carrito.reduce((total, producto) => total + (producto.item.precio * producto.cantidad), 0);
+
+
 
     //Manejador del evento "sumbit" del formulario
     const manejadorSubmit = (event) => {
         event.preventDefault();
         //Validar que todos los campos estén completos
         if (!nombre || !apellido || !telefono || !email || !emailConfirmacion) {
-            setError("Por favor, complete todos los campos");
+            setError("Por favor, complete todos los campos.");
             return;
         }
 
         //Validamos que los campos del email coincidan entre si
         if (email !== emailConfirmacion) {
-            setError("Los emails ingresados no coinciden entre sí")
+            setError("Los emails ingresados no coinciden entre sí.")
             return;
         }
 
@@ -56,57 +63,77 @@ const Checkout = () => {
             })
     }
 
+    if (ordenId) {
+        return (
+            <div className="divMsjFinal">
+                <strong>
+                    ¡Gracias por tu compra! Tu numero de orden es:
+                    <div className="msjFinal">{ordenId}</div>
+                </strong>
+            </div>
+        );
+    }
+
 
     return (
-        <div>
-            <h2 className="h2Checkout">Checkout</h2>
-            <form className="formManejador" onSubmit={manejadorSubmit}>
-                {carrito.map(producto => (
-                    <div className="divCheckout" key={producto.item.id}>
-                        <p>{producto.item.nombre} x {producto.cantidad}</p>
-                        <p>Precio: $ {producto.item.precio}</p>
-                        <hr />
+        <div className="contenedorCheckout">
+            <div className="div1">
+                <h2 className="detallesOrden">Detalles de la orden</h2>
+                <div className="contenedorDetalles">
+                    <hr />
+                    {carrito.map(producto => (
+                        <div key={producto.item.id}>
+                            <p>{producto.item.nombre} x {producto.cantidad}</p>
+                            <p>Precio: $ {producto.item.precio}</p>
+                            <hr />
+                        </div>
+                    ))}
+
+                    <div><h3 className="precioFinalCheckout">TOTAL: ${total}</h3></div>
+                    <hr /></div>
+            </div>
+            
+            <div className="div2">
+                <form onSubmit={manejadorSubmit}>
+                    <h2 className="h2Checkout">Checkout</h2>
+                    <div>
+                        <label htmlFor="">Nombre</label>
+                        <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
                     </div>
-                ))}
 
-                <div>
-                    <label htmlFor="">Nombre</label>
-                    <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-                </div>
+                    <div>
+                        <label htmlFor="">Apellido</label>
+                        <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
+                    </div>
 
-                <div>
-                    <label htmlFor="">Apellido</label>
-                    <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
-                </div>
+                    <div>
+                        <label htmlFor="">Telefono</label>
+                        <input type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                    </div>
 
-                <div>
-                    <label htmlFor="">Telefono</label>
-                    <input type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
-                </div>
+                    <div>
+                        <label htmlFor="">E-Mail</label>
+                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
 
-                <div>
-                    <label htmlFor="">E-Mail</label>
-                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </div>
+                    <div>
+                        <label htmlFor="">Confirmar E-Mail</label>
+                        <input className="ultimoInput" type="text" value={emailConfirmacion} onChange={(e) => setEmailConfimacion(e.target.value)} />
+                    </div>
 
-                <div>
-                    <label htmlFor="">Confirmar E-Mail</label>
-                    <input type="text" value={emailConfirmacion} onChange={(e) => setEmailConfimacion(e.target.value)} />
-                </div>
+                    {
+                        error && <p className="error" style={{ color: "red" }}> {error} </p>
+                    }
 
-                {
-                    error && <p style={{ color: "red" }}> {error} </p>
-                }
+                    <button className="botonFinalizarCheckout" type="submit">FINALIZAR ORDEN</button>
 
-                <button className="botonFinalizarCheckout" type="submit">FINALIZAR ORDEN</button>
-                
-                {
-                    ordenId && (
-                        <strong className="mensajeFinal">Gracias por tu compra! Tu numero de orden es: {ordenId} </strong>
-                    )
-                }
-            </form>
-        </div>
+                    {
+                        ordenId && (
+                            <strong className="mensajeFinal">Gracias por tu compra! Tu numero de orden es: {ordenId} </strong>
+                        )
+                    }
+                </form>
+            </div></div>
     )
 }
 
