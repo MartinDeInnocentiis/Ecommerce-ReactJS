@@ -1,7 +1,6 @@
 import './ItemListContainer.css'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
-//import { getProductos, getProductosPorCategoria } from '../../asyncmock'
 import { useParams, useLocation } from 'react-router-dom'
 import { db } from '../../services/config'
 import { collection,getDocs, where, query } from 'firebase/firestore'
@@ -13,6 +12,7 @@ const ItemListContainer = (props) => {
   const location = useLocation();
   const pathName = location.pathname
 
+  //FUNCION PARA CONSEGUIR EL NOMBRE DE LA CATEGORÍA EN BASE A SU NUMERO, PARA PODER RENDERIZARLO LUEGO TRAS REALIZAR EL FILTRADO
   const getPathName = (idCat) => {
     switch (idCat) {
       case "/categoria/1":
@@ -49,15 +49,6 @@ const ItemListContainer = (props) => {
       })
       .catch(error=>console.log(error))
   },[idCategoria])
-  /*
-  useEffect(() => {
-    const funcionProductos = idCategoria ? getProductosPorCategoria : getProductos;
-
-    funcionProductos(idCategoria)
-      .then(res => setProductos(res))
-      .catch(error => console.log(error))
-  }, [idCategoria])
-  */
 
     return (
         <div>

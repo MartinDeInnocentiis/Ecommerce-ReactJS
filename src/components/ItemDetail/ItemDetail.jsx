@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { CarritoContext } from '../../context/CarritoContext'
 import { useContext } from 'react'
 
+
 const ItemDetail = ({ id, nombre, precio, stock, img }) => {
   //Creo un estado con la cantidad de productos agregados
   const [agregarCantidad, setAgregarCantidad] = useState(0);
@@ -14,7 +15,6 @@ const ItemDetail = ({ id, nombre, precio, stock, img }) => {
   //Creo una funcion que maneje la cantidad
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-    //console.log("Productos agregados" + cantidad);
     const item = { id, nombre, precio };
     agregarProducto(item, cantidad);
   }
@@ -55,6 +55,3 @@ const ItemDetail = ({ id, nombre, precio, stock, img }) => {
 }
 
 export default ItemDetail
-
-//         agregarCantidad > 0 ? (<Link className="finalizarCompra" to="/cart"> FINALIZAR COMPRA</Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
-

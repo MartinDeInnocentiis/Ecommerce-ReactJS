@@ -7,7 +7,7 @@ import { getFirestore } from "firebase/firestore";
 
 //Estamos trabajando con un objeto con toda nuestra información de la cuenta. Acá se incluye la key personal de acceso a la BD. 
 const firebaseConfig = {
-  apiKey: "AIzaSyBsP2XWxxDMtyiz4OJpr5SJTDPcXZ8k81c",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "ecommerce-fightshop.firebaseapp.com",
   projectId: "ecommerce-fightshop",
   storageBucket: "ecommerce-fightshop.appspot.com",

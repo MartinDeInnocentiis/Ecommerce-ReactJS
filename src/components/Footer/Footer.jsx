@@ -50,6 +50,7 @@ const Footer = () => {
 
                 </div>
             </div>
+            <div className='copyright'>2023 - FightFever Shop - © Copyright. Todos los derechos reservados.</div>
         </footer>
     )
 }

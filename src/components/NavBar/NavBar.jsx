@@ -8,7 +8,6 @@ const NavBar = () => {
       <Link to={"/"} className="nav-link">
         {
           <img src="../img/logo.png" alt="StoreLogo" className="logo"/>
-          //<h1 className="Home">Hunters Shop</h1>
         }
       </Link>
       <nav>

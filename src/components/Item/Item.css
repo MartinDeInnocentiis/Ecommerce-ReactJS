@@ -8,10 +8,11 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    
+
 }
 
-.cardProducto:hover .imgProducto, .cardProducto:focus .imgProducto {
+.cardProducto:hover .imgProducto,
+.cardProducto:focus .imgProducto {
     transform: scale(1.05);
     transition: transform 0.5s ease;
 }
@@ -33,14 +34,14 @@
     border-bottom: 1px solid rgb(181, 181, 181);
 }
 
-.cardProducto h3{
-    font-size:larger;
+.cardProducto h3 {
+    font-size: larger;
 }
 
 .imgProducto {
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: cover;
     border-radius: 0 95px 0 0;
     overflow: hidden;
     z-index: 0;
@@ -48,7 +49,7 @@
 }
 
 
-.link {
+.verMas {
     text-align: center;
     color: white;
     font-size: 1.2rem;
@@ -56,26 +57,30 @@
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    text-decoration: none; 
+    text-decoration: none;
     padding: 0.5rem .03rem;
     transition: all .5s ease;
 }
 
 
-#light .link {
+.verMas:active {
+    transform: scale(0.9);
+}
+
+#light .verMas {
     background-color: #2b6a308a;
 }
 
-#light .link:hover{
+#light .verMas:hover {
     transition: all .5s ease;
     background-color: #2b6a30;
 }
 
-#dark .link {
-    background-color:rgba(31, 13, 83, 0.65);
+#dark .verMas {
+    background-color: rgba(31, 13, 83, 0.65);
 }
 
-#dark .link:hover {
+#dark .verMas:hover {
     transition: all .5s ease;
-    background-color:rgba(80, 53, 163, 0.516);
+    background-color: rgba(80, 53, 163, 0.516);
 }

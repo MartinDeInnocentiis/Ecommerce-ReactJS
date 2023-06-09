@@ -2,13 +2,13 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import { useState } from 'react';
 import { createContext } from 'react';
 import ReactSwitch from 'react-switch';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CarritoProvider } from './context/CarritoContext';
 export const ThemeContext = createContext(null);
 
@@ -19,9 +19,9 @@ function App() {
     setTheme((now) => (now === "light" ? "dark" : "light"))
   }
   return (
-    <ThemeContext.Provider value={{ theme, switchTheme }}>
-      <BrowserRouter>
-        <CarritoProvider>
+    <BrowserRouter>
+      <CarritoProvider>
+        <ThemeContext.Provider value={{ theme, switchTheme }}>
           <div className="App" id={theme}>
             <NavBar />
             <div className="switch">
@@ -38,9 +38,9 @@ function App() {
             </Routes>
             <Footer />
           </div>
-        </CarritoProvider>
-      </BrowserRouter >
-    </ThemeContext.Provider>
+        </ThemeContext.Provider>
+      </CarritoProvider>
+    </BrowserRouter >
   );
 }
 

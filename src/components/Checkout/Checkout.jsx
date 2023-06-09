@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react"
+import { useState, useContext } from "react"
 import { CarritoContext } from "../../context/CarritoContext"
 import { db } from "../../services/config"
 import { collection, addDoc } from "firebase/firestore"
@@ -6,7 +6,7 @@ import './Checkout.css'
 
 
 const Checkout = () => {
-    const { carrito, vaciarCarrito } = useContext(CarritoContext);
+    const { carrito, vaciarCarrito, total } = useContext(CarritoContext);
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
     const [telefono, setTelefono] = useState("")
@@ -14,13 +14,6 @@ const Checkout = () => {
     const [emailConfirmacion, setEmailConfimacion] = useState("")
     const [error, setError] = useState("")
     const [ordenId, setOrdenId] = useState("")
-
-    //Calculo el total de los productos
-    const totalCantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0);
-
-    //Calculo el precio total
-    const total = carrito.reduce((total, producto) => total + (producto.item.precio * producto.cantidad), 0);
-
 
 
     //Manejador del evento "sumbit" del formulario
@@ -92,7 +85,7 @@ const Checkout = () => {
                     <div><h3 className="precioFinalCheckout">TOTAL: ${total}</h3></div>
                     <hr /></div>
             </div>
-            
+
             <div className="div2">
                 <form onSubmit={manejadorSubmit}>
                     <h2 className="h2Checkout">Checkout</h2>
