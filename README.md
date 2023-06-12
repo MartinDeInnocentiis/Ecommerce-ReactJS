@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# FightFever Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FightFever Shop es un proyecto de ecommerce App desarrollado con ReactJS. Esta aplicación permite a los usuarios ver una lista de productos disponibles y realizar compras en línea. El catálogo de productos y la información de las órdenes se almacenan en Firebase.
 
-## Available Scripts
+## Tecnologías utilizadas
+- React
+- React Router
+- Firebase
 
-In the project directory, you can run:
+## Funcionalidades
+- Ver una lista de productos disponibles
+- Agregar productos al carrito de compras
+- Ver el carrito de compras
+- Realizar una orden de compra
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Para instalar y ejecutar la aplicación en tu máquina local, sigue estos pasos:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clona el repositorio en tu máquina local.
+2. Abre una terminal en el directorio del proyecto.
+3. Ejecuta el comando npm install para instalar las dependencias.
+4. Ejecuta el comando npm start para iniciar la aplicación.
+5. Abre tu navegador y visita http://localhost:3000 para ver la aplicación en acción.
 
-### `npm test`
+## Configuración de Firebase
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Para utilizar Firebase en esta aplicación, sigue estos pasos:
 
-### `npm run build`
+1. Crea una cuenta en Firebase y crea un nuevo proyecto.
+2. En la sección "Autenticación" de Firebase, habilita el proveedor de autenticación por correo electrónico y contraseña.
+3. En la sección "Firestore" de Firebase, crea una nueva base de datos y configura las reglas de seguridad para permitir el acceso de lectura/escritura solo a usuarios autenticados.
+4. En la sección "Configuración del proyecto" de Firebase, haz clic en "Agregar aplicación" y sigue las instrucciones para agregar una nueva aplicación web.
+5. Copia las credenciales de Firebase y configura las variables de entorno en el archivo .env de tu proyecto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más información.
