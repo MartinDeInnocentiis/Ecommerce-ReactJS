@@ -1,39 +1,57 @@
 .contenedorItem {
-    text-align: justify;
     padding-bottom: 5rem;
+    margin-top: 3rem;
+    height: 50vh;
 }
 
-.contenedorItem h2, h3{
-    text-align: center;
-    font-size: xx-large;
+.detailNombre{
+    letter-spacing: 3px;
+}
+
+.detailPrecio{
+    letter-spacing: 4px;
+}
+
+.divDetails{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.divInfo{
+    height: 54vh;
+    text-align: left;
+    font-size: larger;
     font-family: "Roboto Condensed", serif;
 }
 
+.divInfo h3{
+    font-size: xx-large;
+}
+
 .imgprod {
-    width: 25vw;
+    height:50vh;
     border: 1px solid #e3e1e1;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    margin: 0 auto;
     margin-bottom: 2rem;
+    margin-right: 2rem;
 }
 
 .description {
     font-size:x-large;
     font-family: "Roboto Condensed", serif;
     font-weight: 500;
+    width: 28vw;
+    height: 22vh;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.botonesDetails{
     display: flex;
-    align-items: center;
-    padding-left:22rem;
-    padding-right:22rem;
 }
 
 .finalizarCompra {
-    padding:2rem;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+    padding-top: 2rem;
 }
 
 .botonFinalizar{
@@ -43,9 +61,9 @@
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.842);
     color:#fff;
-    font-size: larger;
-    height:7vh;
-    width: 25vw;
+    font-size: medium;
+    height:4vh;
+    width: 14vw;
     transition: all .5s ease;
 }
 
@@ -56,6 +74,35 @@
 
 .botonFinalizar:hover{
     background-color:rgb(51, 86, 51);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.315);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.445);
+    letter-spacing: 1px;
     transition: all .5s ease;
+}
+
+
+.botonSeg {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border:none;
+    border-radius: 3px;
+    background-color: rgba(187, 187, 187, 0.363);
+    color:#2b2b2b;
+    font-size: medium;
+    height:4.1vh;
+    width: 14vw;
+    transition: all .5s ease;
+    margin-top: 3.4vh;
+}
+
+
+.botonSeg:hover {
+    transition: all .5s ease;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.466);
+    box-shadow: 0px 4px 8px rgba(68, 68, 68, 0.247);
+}
+
+#dark .botonSeg{
+    color:#000000;
+    border-color: rgba(255, 255, 255, 0.11);
 }

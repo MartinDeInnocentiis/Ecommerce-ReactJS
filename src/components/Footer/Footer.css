@@ -1,4 +1,5 @@
 footer{
+    margin-top: 4rem;
     background-color: rgba(25, 23, 23, 0.895);
     color: rgba(207, 203, 203, 0.922);
 }
@@ -9,12 +10,14 @@ footer{
     height: 35vh;
     display: flex;
     justify-content: space-around;
+    transition: all .5s ease;
 }
 
 .copyright{
     border:none;
-    background-color: rgba(25, 23, 23, 0.459);
+    background-color: rgba(25, 23, 23, 0.267);
     color: rgba(207, 203, 203, 0.922);
+    letter-spacing: 1px;
     font-size: large;
     display: flex;
     justify-content: center;
@@ -35,12 +38,13 @@ footer{
 ul {
     list-style-type: none;
     padding: 0;
-    transition: transform .5s ease;
+    transition: all .5s ease;
 }
 
 .footerList:hover {
     transform: scale(1.2);
     color: rgb(255, 255, 255);
+    transition: all .5s ease;
 }
 
 .logo {

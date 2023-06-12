@@ -22,33 +22,41 @@ const ItemDetail = ({ id, nombre, precio, stock, img }) => {
 
   return (
     <div className='contenedorItem'>
-      <h2>{nombre} </h2>
-      <h3>PRECIO: ${precio} </h3>
-      <p className="description">
-        Todos nuestros productos son de la más alta calidad, lo que nos convierte en la marca N°1 en el mundo de las MMA, Boxeo, JiuJitsu y otros deportes de combate.
-        Elaborados con materiales de primer nivel, nuestros productos alcanzan un standar inmejorable de calidad. Sponsor oficial de la UFC.
-        Descubre la excelencia en cada movimiento con VENUM.
-        Únete al Team Venum y alcanza tu máximo potencial.
-      </p>
-      <img src={img} alt={nombre} className='imgprod' />
+      <div className="divDetails">
+          <img src={img} alt={nombre} className='imgprod' />
+      <div className="divInfo">
+          <h2 className='detailNombre'>{nombre} </h2>
+          <h3 className="detailPrecio">PRECIO: ${precio} </h3>
+          <p className="description">
+            Todos nuestros productos son de la más alta calidad, lo que nos convierte en la marca N°1 en el mundo de las MMA, Boxeo, JiuJitsu y otros deportes de combate.
+            Elaborados con materiales de primer nivel, nuestros productos alcanzan un standar inmejorable de calidad. Sponsor oficial de la UFC.
+            Descubre la excelencia en cada movimiento con VENUM.
+            Únete al Team Venum y alcanza tu máximo potencial.
+          </p>
+      
+      <div className="botonesDetails">
+        {
+          //Logica de montaje y desmontaje de componentes:
+          agregarCantidad > 0 ? (
+            <>
+              <div className="finalizarCompra">
+                <Link to="/cart">
+                  <button className="botonFinalizar">
+                    IR AL CARRITO
+                  </button>
+                </Link>
+              </div>
 
-      {
-        //Logica de montaje y desmontaje de componentes:
-        agregarCantidad > 0 ? (
-          <>
-            <div className="finalizarCompra">
-              <button className="botonFinalizar">
-                <Link to="/cart">FINALIZAR COMPRA</Link>
-              </button>
-            </div>
-            
-            <div>
-              <Link className="seguirComprando" to="/"> <button className="botonSeguir">Seguir comprando</button></Link>
-            </div>
-          </>
-        ) : (
-          <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
-        )}
+              <div className="seguirCompra">
+                <Link className="seguirComprando" to="/"> <button className='botonSeg'>SEGUIR COMPRANDO</button></Link>
+              </div>
+            </>
+          ) : (
+            <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
+          )}
+      </div>
+      </div>
+      </div>
     </div>
 
   )
